@@ -77,27 +77,31 @@ const ListClass = () => {
 
         <h1 class="text-4xl font-bold text-white mb-6">Classes List</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {classes.map((classItem) => (
-            <div class="bg-white rounded-lg shadow-lg p-6" key={classItem.id}>
-              <h3 class="text-xl font-bold mb-4">{classItem.sclassName}</h3>
-              <p class="text-gray-600">Created At: {classItem.createdAt}</p>
-              <p class="text-gray-600">Updated At: {classItem.updatedAt}</p>
-              <div class="flex justify-end mt-4 space-x-4">
-                <button
-                  class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-all duration-300"
-                  onClick={() => handleViewClass(classItem.id)}
-                >
-                  View
-                </button>
-                <button
-                  class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300"
-                  onClick={() => handleDeleteClass(classItem.id)}
-                >
-                  Delete
-                </button>
+          {classes.length > 0 ? (
+            classes.map((classItem) => (
+              <div class="bg-white rounded-lg shadow-lg p-6" key={classItem.id}>
+                <h3 class="text-xl font-bold mb-4">{classItem.sclassName}</h3>
+                <p class="text-gray-600">Created At: {classItem.createdAt}</p>
+                <p class="text-gray-600">Updated At: {classItem.updatedAt}</p>
+                <div class="flex justify-end mt-4 space-x-4">
+                  <button
+                    class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-all duration-300"
+                    onClick={() => handleViewClass(classItem.id)}
+                  >
+                    View
+                  </button>
+                  <button
+                    class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300"
+                    onClick={() => handleDeleteClass(classItem.id)}
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>No classes found</p>
+          )}
         </div>
       </div>
     </>

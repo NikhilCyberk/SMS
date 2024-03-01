@@ -11,15 +11,16 @@ import ChooseUser from "./components/pages/ChooseUser";
 import AdminProfile from "./components/pages/dashboard/admin/AdminProfile";
 import AddClass from "./components/pages/class/AddClass";
 import Topbar from "./components/bar/Topbar";
-import SideB from "./components/bar/SideB";
+
 import ListClass from "./components/pages/class/ListClass";
-import Student from "./components/pages/Student/Student";
+
+import AddStudentForm from "./components/pages/Student/AddStudentForm";
 
 function App() {
   return (
     <>
       <Topbar />
-      
+
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/chooseuser" element={<ChooseUser />} />
@@ -33,7 +34,7 @@ function App() {
         <Route path="/admin-profile" element={<AdminProfile />} />
         <Route path="/admin-add-class" element={<AddClass />} />
         <Route path="/admin-list-class/:id" element={<ListClass />} />
-        <Route path="/admin-add-student" element={<Student />} />
+        <Route path="/admin-add-student" element={<AddStudentForm />} />
       </Routes>
     </>
   );

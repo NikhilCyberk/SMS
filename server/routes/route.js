@@ -12,7 +12,9 @@ import { adminAddStuudent } from "../controller/studentController.js";
 import jwt from "jsonwebtoken";
 import nodemailwer from "nodemailer";
 
-router.get("/", (req, res) => {
+router.post("/admin/add-student", adminAddStuudent);
+
+router.get("", (req, res) => {
   return res.json({ message: "hello from server" });
 });
 
@@ -24,7 +26,7 @@ router.post("/add-class", adminAddClass);
 
 router.get("/get-class/:id", sclassList);
 
-router.post("/add-stuudent", adminAddStuudent);
+// router.post("/admin/add-stuudent", adminAddStuudent);
 
 // const verifyUser = async (req, res, next) => {
 //   try {

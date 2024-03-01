@@ -93,8 +93,6 @@ export const adminLogin = async (req, res) => {
   });
 };
 
-export const adminAdd = async (req, res) => {
-  let { name, email, password, schoolName } = req.body;
-};
+
 
 // module.exports = { adminRegister };

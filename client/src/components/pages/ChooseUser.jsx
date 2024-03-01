@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import AdminCard from "./admin/AdminCard";
 import TeacherCard from "./Teacher/TeacherCard";
-import Student from "./Student/Student";
+
 import StudentCard from "./Student/StudentCard";
 
 const ChooseUser = () => {
