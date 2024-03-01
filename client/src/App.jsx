@@ -15,6 +15,7 @@ import Topbar from "./components/bar/Topbar";
 import ListClass from "./components/pages/class/ListClass";
 
 import AddStudentForm from "./components/pages/Student/AddStudentForm";
+import ListStudent from "./components/pages/Student/ListStudent";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/admin-add-class" element={<AddClass />} />
         <Route path="/admin-list-class/:id" element={<ListClass />} />
         <Route path="/admin-add-student" element={<AddStudentForm />} />
+        <Route path="/admin-list-student" element={<ListStudent />} />
       </Routes>
     </>
   );

@@ -29,7 +29,7 @@ export const adminAddClass = async (req, res) => {
 
 export const sclassList = async (req, res) => {
   //   return res.send("hello from class list ");
-  console.log(req.params.id);
+  // console.log(req.params.id);
   try {
     let sclasses = await Sclass.find({ school: req.params.id });
     if (sclasses.length > 0) {

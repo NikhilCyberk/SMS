@@ -95,6 +95,13 @@ const SideB = () => {
             >
               <span className="mx-2 text-sm font-medium">Add Student</span>
             </NavLink>
+            <NavLink
+              to="/admin-list-student"
+              activeClassName="text-white bg-blue-700 dark:bg-gray-800"
+              className="flex items-center px-4 py-3 text-gray-100 transition-colors duration-300 transform rounded-lg hover:text-white hover:bg-blue-600"
+            >
+              <span className="mx-2 text-sm font-medium">List Student</span>
+            </NavLink>
           </div>
         </nav>
       </div>

@@ -8,7 +8,10 @@ import {
   verifyUser,
 } from "../controller/adminController.js";
 import { adminAddClass, sclassList } from "../controller/classController.js";
-import { adminAddStuudent } from "../controller/studentController.js";
+import {
+  adminAddStuudent,
+  getStudents,
+} from "../controller/studentController.js";
 import jwt from "jsonwebtoken";
 import nodemailwer from "nodemailer";
 
@@ -25,6 +28,8 @@ router.post("/auth/login", adminLogin);
 router.post("/add-class", adminAddClass);
 
 router.get("/get-class/:id", sclassList);
+
+router.get("/get-Students/:id", getStudents);
 
 // router.post("/admin/add-stuudent", adminAddStuudent);
 
