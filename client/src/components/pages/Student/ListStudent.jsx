@@ -6,7 +6,7 @@ const ListStudent = () => {
   const [students, setStudent] = useState([]);
 
   const id = localStorage.getItem("_id");
-  console.log(id);
+  // console.log(id);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,7 +17,7 @@ const ListStudent = () => {
         );
         // Assuming your API response has the data you want in response.data
         setStudent(response.data);
-        console.log(response.data);
+        // console.log(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
